@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Set Streamlit page configuration
-st.set_page_config(page_title="Universal Unit Converter", page_icon="🔁", layout="wide")
+st.set_page_config(page_title="🌠 AstroConverter", page_icon="🔁", layout="wide")
 
 # Theme Toggle (Dark Mode)
 dark_mode = st.sidebar.checkbox("🌙 Dark Mode")
