@@ -61,7 +61,7 @@ def save_to_history(conversion):
 if category == "Weight":
     weight_units = {"Grams": 1, "Kilograms": 0.001, "Pounds": 0.00220462, "Ounces": 0.035274}
     value = st.number_input("Enter weight", min_value=0.0, value=1.0)
-    from_unit = st.selectbox("From", weight_units)
+    from_unit = st.selectbox("Convert", weight_units)
     to_unit = st.selectbox("To", weight_units)
 
     result = value * (weight_units[to_unit] / weight_units[from_unit])
@@ -72,7 +72,7 @@ if category == "Weight":
 
 elif category == "Temperature":
     value = st.slider("Enter temperature", min_value=-100, max_value=100, value=25)
-    from_unit = st.radio("From", ["Celsius", "Fahrenheit", "Kelvin"])
+    from_unit = st.radio("Convert", ["Celsius", "Fahrenheit", "Kelvin"])
     to_unit = st.radio("To", ["Celsius", "Fahrenheit", "Kelvin"])
 
     conversions = {
@@ -93,7 +93,7 @@ elif category == "Temperature":
 elif category == "Currency":
     value = st.number_input("Enter amount", min_value=0.0, value=1.0)
     currency_list = ["USD", "EUR", "GBP", "JPY", "INR", "CAD", "AUD", "CNY", "BRL"]
-    from_currency = st.selectbox("From", currency_list)
+    from_currency = st.selectbox("Convert", currency_list)
     to_currency = st.selectbox("To", currency_list)
 
     if st.button("Convert"):
@@ -115,7 +115,7 @@ elif category == "Currency":
 elif category == "Length":
     length_units = {"Meters": 1, "Kilometers": 0.001, "Centimeters": 100, "Feet": 3.28084, "Inches": 39.3701}
     value = st.number_input("Enter length", min_value=0.0, value=1.0)
-    from_unit = st.selectbox("From", length_units)
+    from_unit = st.selectbox("Convert", length_units)
     to_unit = st.selectbox("To", length_units)
 
     result = value * (length_units[to_unit] / length_units[from_unit])
@@ -127,7 +127,7 @@ elif category == "Length":
 elif category == "Time":
     time_units = {"Seconds": 1, "Minutes": 1/60, "Hours": 1/3600, "Days": 1/86400}
     value = st.number_input("Enter time", min_value=0.0, value=1.0)
-    from_unit = st.selectbox("From", time_units)
+    from_unit = st.selectbox("Convert", time_units)
     to_unit = st.selectbox("To", time_units)
 
     result = value * (time_units[to_unit] / time_units[from_unit])
@@ -139,7 +139,7 @@ elif category == "Time":
 elif category == "Area":
     area_units = {"Square Meters": 1, "Square Kilometers": 0.000001, "Square Feet": 10.7639, "Acres": 0.000247105}
     value = st.number_input("Enter area", min_value=0.0, value=1.0)
-    from_unit = st.selectbox("From", area_units)
+    from_unit = st.selectbox("Convert", area_units)
     to_unit = st.selectbox("To", area_units)
 
     result = value * (area_units[to_unit] / area_units[from_unit])
@@ -151,7 +151,7 @@ elif category == "Area":
 elif category == "Speed":
     speed_units = {"Meters per second": 1, "Kilometers per hour": 3.6, "Miles per hour": 2.23694}
     value = st.number_input("Enter speed", min_value=0.0, value=1.0)
-    from_unit = st.selectbox("From", speed_units)
+    from_unit = st.selectbox("Convert", speed_units)
     to_unit = st.selectbox("To", speed_units)
 
     result = value * (speed_units[to_unit] / speed_units[from_unit])
@@ -163,7 +163,7 @@ elif category == "Speed":
 elif category == "Volume":
     volume_units = {"Liters": 1, "Milliliters": 1000, "Cubic Meters": 0.001, "Gallons": 0.264172}
     value = st.number_input("Enter volume", min_value=0.0, value=1.0)
-    from_unit = st.selectbox("From", volume_units)
+    from_unit = st.selectbox("Convert", volume_units)
     to_unit = st.selectbox("To", volume_units)
 
     result = value * (volume_units[to_unit] / volume_units[from_unit])
